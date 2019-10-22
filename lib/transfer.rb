@@ -19,7 +19,6 @@ class Transfer
   end
 
   def execute_transaction
-    binding.pry
     if @sender.balance >= @amount && @status == "pending" && valid?
       @status = "complete"
       @sender.balance -= @amount
